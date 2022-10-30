@@ -64,8 +64,7 @@ function Items() {
       <Item />
       <Item />
       <Item /> */}
-    </div>
-  );
+    </div>)
 }
 
 export default Items;
