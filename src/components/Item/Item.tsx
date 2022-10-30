@@ -1,10 +1,15 @@
+import { Task } from '../../utils/interfaces';
 import './Item.css';
 
-function Item() {
+function Item({ item }: { item: Task }) {
   return (
     <li className="item">
-      <input type="checkbox" className="item__checkbox" />
-      <p className="item__value">Very important task</p>
+      <input
+        type="checkbox"
+        className="item__checkbox"
+        defaultChecked={item.isDone}
+      />
+      <p className="item__value">{item.value}</p>
       <div className="item__buttons">
         <button
           className="item__button item__button_type_edit"

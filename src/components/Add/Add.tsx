@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { Task } from '../../utils/interfaces';
 import './Add.css';
 
-function Add() {
+function Add({ onAdd }: { onAdd: (v: Task) => void }) {
   const [value, setValue] = useState('');
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
@@ -11,6 +12,15 @@ function Add() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (value) {
+      const task: Task = {
+        id: Number(new Date()),
+        value: value,
+        isDone: false,
+      };
+      onAdd(task);
+      setValue('');
+    }
   }
 
   return (

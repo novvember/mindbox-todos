@@ -1,69 +1,13 @@
 import Item from '../Item/Item';
 import './Items.css';
+import { Task } from '../../utils/interfaces';
 
-function Items() {
+function Items({ items }: { items: Task[] }) {
   return (
     <ul className="items">
-      <Item />
-      <Item />
-      {/* <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item /> */}
+      {items.map((item) => {
+        return <Item key={item.id} item={item} />;
+      })}
     </ul>
   );
 }
