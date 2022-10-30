@@ -3,7 +3,7 @@ import './Items.css';
 
 function Items() {
   return (
-    <div className="items">
+    <ul className="items">
       <Item />
       <Item />
       {/* <Item />
@@ -64,7 +64,8 @@ function Items() {
       <Item />
       <Item />
       <Item /> */}
-    </div>)
+    </ul>
+  );
 }
 
 export default Items;
