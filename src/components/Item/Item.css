@@ -1,3 +1,51 @@
 .item {
+  padding: 1em 0.5em;
   display: grid;
+  grid-template-columns: 2em 1fr max-content;
+  gap: 0.5em;
+  align-items: start;
+}
+
+.item__checkbox {
+  width: 2em;
+  aspect-ratio: 1;
+  margin-top: -0.5em;
+}
+
+.item__value {
+  margin: 0;
+}
+
+.item__buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+.item__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  width: 1em;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.item:hover .item__button {
+  visibility: visible;
+}
+
+.item__button:hover {
+  opacity: 1;
+}
+
+.item__button_type_edit {
+  background-image: url(../../images/icon__edit.svg);
+}
+
+.item__button_type_delete {
+  background-image: url(../../images/icon__delete.svg);
 }
