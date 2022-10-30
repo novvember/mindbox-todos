@@ -1,0 +1,55 @@
+/* Файл normalize.css */
+@import url(../../vendor/normalize.css);
+
+/* Шрифт Inter*/
+@import url(../../vendor/fonts/raleway/raleway.css);
+
+html {
+  /* Плавная прокрутка */
+  scroll-behavior: smooth;
+}
+
+/* Общий стиль для приложения */
+.page {
+  /* Сглаживание */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  /* Шрифт для всей страницы */
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  /* Цветовая схема */
+  --surface: #f5f5f5;
+  --on-surface: #000;
+  --surface-general: #fff;
+  --primary: #ccdfdb;
+  --secondary: #e9d9d8;
+  /* Цвета страницы по умолчанию */
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+/* Фокус интерактивных элементов по умолчанию */
+a:focus,
+button:focus,
+input:focus {
+  outline-offset: 5px;
+  outline-color: var(--primary);
+}
+
+/* Родительский элемент всех компонентов */
+.content {
+  width: 100%;
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}

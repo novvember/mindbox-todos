@@ -1,0 +1,12 @@
+.footer {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 0.9em;
+  text-align: center;
+}

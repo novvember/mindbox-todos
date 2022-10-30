@@ -1,0 +1,14 @@
+.add {
+  display: flex;
+  flex-direction: column;
+}
+
+.add__input {
+  display: block;
+  padding: 1em;
+}
+
+.add__input::placeholder {
+  font-style: italic;
+  opacity: 0.5;
+}
