@@ -42,9 +42,11 @@ input:focus {
 /* Родительский элемент всех компонентов */
 .content {
   width: 100%;
+  box-sizing: border-box;
   max-width: 768px;
   min-width: 320px;
   margin: 0 auto;
+  padding: 0 0.5em;
   display: flex;
   height: 100vh;
   flex-direction: column;
