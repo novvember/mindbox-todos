@@ -33,6 +33,8 @@ function Item({
     if (isEditMode && valueRef?.current) {
       const element = valueRef.current as HTMLElement;
       element.focus();
+      window.getSelection()!.selectAllChildren(element);
+      window.getSelection()!.collapseToEnd();
     }
   }, [valueRef, isEditMode]);
 
