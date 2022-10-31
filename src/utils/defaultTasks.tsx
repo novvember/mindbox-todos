@@ -12,7 +12,7 @@ const defaultTasks: Task[] = [
     id: 10,
   },
   {
-    value: 'Add a new task not to forget to buy milk',
+    value: 'Add a new task not to forget to buy tomatos for dinner 🍅',
     isDone: false,
     id: 9,
   },
