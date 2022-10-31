@@ -2,7 +2,7 @@ import { Task } from '../../utils/interfaces';
 import Checkbox from '../Checkbox/Checkbox';
 import './Item.css';
 import classNames from 'classnames';
-import { useState, useRef, useEffect, FocusEvent } from 'react';
+import { useState, useRef, useEffect, FocusEvent, KeyboardEvent } from 'react';
 
 function Item({
   item,
@@ -51,6 +51,13 @@ function Item({
     }
   }, [value, item, onEdit]);
 
+  function handleKeyDown(event: KeyboardEvent<HTMLParagraphElement>) {
+    if (event.key === 'Enter' || event.key === 'Escape') {
+      const element = valueRef.current! as HTMLElement;
+      element.blur();
+    }
+  }
+
   return (
     <li className={classNames('item', { item_editable: isEditMode })}>
       <Checkbox
@@ -64,6 +71,8 @@ function Item({
         ref={valueRef}
         onFocus={handleFocus}
         onBlur={handleBlur}
+        onKeyDown={handleKeyDown}
+        suppressContentEditableWarning={true}
       >
         {item.value}
       </p>
