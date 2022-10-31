@@ -1,6 +1,7 @@
 import { FilterConfig, Task } from '../../utils/interfaces';
 import './Filter.css';
 import { ChangeEvent } from 'react';
+import getStatus from '../../utils/getStatus';
 
 function Filter({
   filteredTasks,
@@ -20,7 +21,9 @@ function Filter({
 
   return (
     <section className="filter">
-      <span className="filter__status">2 items left</span>
+      <span className="filter__status">
+        {getStatus(filteredTasks, filterConfig)}
+      </span>
 
       <form action="" className="filter__groups">
         <label className="filter__radio-container">
