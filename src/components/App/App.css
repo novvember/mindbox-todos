@@ -28,6 +28,7 @@ html {
   --surface-general: #fff;
   --primary: #ccdfdb;
   --secondary: #e9d9d8;
+  --edit: #FFFDD0;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);

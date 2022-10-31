@@ -11,11 +11,15 @@
   border-bottom: none;
 }
 
+.item_editable {
+  background-color: var(--edit);
+}
+
 .item__checkbox {
   width: 2em;
   aspect-ratio: 1;
-  margin-top: -0.5em;
-  margin-bottom: -0.5em;
+  margin-top: -0.4em;
+  margin-bottom: -0.6em;
 }
 
 .item__value {
@@ -28,6 +32,10 @@
   text-decoration-color: var(--primary);
   text-decoration-thickness: 1px;
   color: var(--on-surface-variant);
+}
+
+.item__value:focus {
+  outline: none;
 }
 
 .item__buttons {
@@ -66,4 +74,12 @@
 
 .item__button_type_delete {
   background-image: url(../../images/icon__delete.svg);
+}
+
+.item__button_type_save {
+  font-size: smaller;
+  width: max-content;
+  aspect-ratio: unset;
+  border: 1px solid var(--primary);
+  border-radius: 0.2em;
 }
