@@ -3,3 +3,7 @@ export interface Task {
   value: string;
   isDone: boolean;
 }
+
+export interface FilterConfig {
+  group: 'all' | 'active' | 'completed';
+}

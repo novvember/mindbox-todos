@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import defaultFilterConfig from '../../utils/defaultFilterCongig';
 import defaultTasks from '../../utils/defaultTasks';
-import { Task } from '../../utils/interfaces';
+import { FilterConfig, Task } from '../../utils/interfaces';
 import Add from '../Add/Add';
 import Filter from '../Filter/Filter';
 import Footer from '../Footer/Footer';
@@ -10,7 +11,37 @@ import Items from '../Items/Items';
 import './App.css';
 
 function App() {
-  const [tasks, setTasks] = useState(loadTasks());
+  const [tasks, setTasks] = useState(loadTasks() as Task[]);
+  const [filterConfig, setFilterConfig] = useState(
+    loadFilterConfig() as FilterConfig,
+  );
+  const [filteredTasks, setFilteredTasks] = useState([] as Task[]);
+
+  // Filter
+
+  function loadFilterConfig() {
+    const filterConfig = localStorage.getItem('filterConfig');
+    if (!filterConfig) return defaultFilterConfig;
+    return JSON.parse(filterConfig);
+  }
+
+  const filterTasks = useCallback(() => {
+    const newTasks = tasks.filter((task) => {
+      if (filterConfig.group === 'all') return true;
+      if (filterConfig.group === 'active') return !task.isDone;
+      return task.isDone;
+    });
+    setFilteredTasks(newTasks);
+  }, [filterConfig.group, tasks]);
+
+  useEffect(() => {
+    if (filterConfig) {
+      localStorage.setItem('filterConfig', JSON.stringify(filterConfig));
+      filterTasks();
+    }
+  }, [filterConfig, filterTasks]);
+
+  // Tasks
 
   function loadTasks(): Task[] {
     const tasks = localStorage.getItem('tasks');
@@ -45,7 +76,7 @@ function App() {
       <Add onAdd={addTask} />
       <main className="main">
         <Items>
-          {tasks.map((item) => {
+          {filteredTasks.map((item) => {
             return (
               <Item
                 key={item.id}
@@ -56,7 +87,11 @@ function App() {
             );
           })}
         </Items>
-        <Filter />
+        <Filter
+          filteredTasks={filteredTasks}
+          filterConfig={filterConfig}
+          onChange={setFilterConfig}
+        />
       </main>
       <Footer />
     </div>
