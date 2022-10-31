@@ -64,6 +64,10 @@ function App() {
     setTasks((tasks) => tasks.filter((item) => item.id !== task.id));
   }
 
+  function deleteDoneTasks() {
+    setTasks((tasks) => tasks.filter((task) => !task.isDone));
+  }
+
   useEffect(() => {
     if (tasks) {
       localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -91,6 +95,7 @@ function App() {
           filteredTasks={filteredTasks}
           filterConfig={filterConfig}
           onChange={setFilterConfig}
+          onDelete={deleteDoneTasks}
         />
       </main>
       <Footer />

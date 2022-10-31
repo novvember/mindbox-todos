@@ -6,10 +6,12 @@ function Filter({
   filteredTasks,
   filterConfig,
   onChange,
+  onDelete,
 }: {
   filteredTasks: Task[];
   filterConfig: FilterConfig;
   onChange: (config: FilterConfig) => void;
+  onDelete: () => void;
 }) {
   function handleGroupChange(event: ChangeEvent<HTMLInputElement>) {
     const group = event.target.value as FilterConfig['group'];
@@ -56,7 +58,9 @@ function Filter({
         </label>
       </form>
 
-      <button className="filter__delete-button">Clear completed</button>
+      <button className="filter__delete-button" onClick={onDelete}>
+        Clear completed
+      </button>
     </section>
   );
 }
