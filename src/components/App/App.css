@@ -28,7 +28,7 @@ html {
   --surface-general: #fff;
   --primary: #ccdfdb;
   --secondary: #e9d9d8;
-  --edit: #FFFDD0;
+  --edit: #fffdd0;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);
@@ -50,6 +50,16 @@ button:focus,
 input:focus {
   outline-offset: 5px;
   outline-color: var(--primary);
+}
+
+/* Стили ссылок по умолчанию */
+a {
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 /* Родительский элемент всех компонентов */

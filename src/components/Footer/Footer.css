@@ -8,5 +8,6 @@
 .footer__text {
   margin: 0;
   font-size: 0.9em;
+  font-weight: 300;
   text-align: center;
 }
