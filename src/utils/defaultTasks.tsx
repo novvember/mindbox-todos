@@ -2,7 +2,7 @@ import { Task } from './interfaces';
 
 const defaultTasks: Task[] = [
   {
-    value: 'Make test assignment for Mindbox',
+    value: 'Test assignment for Mindbox',
     isDone: true,
     id: 11,
   },

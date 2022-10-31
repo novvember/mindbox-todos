@@ -4,12 +4,18 @@
   grid-template-columns: 2em 1fr max-content;
   gap: 0.5em;
   align-items: start;
+  border-bottom: 0.5px solid var(--on-surface-secondary);
+}
+
+.item:last-child {
+  border-bottom: none;
 }
 
 .item__checkbox {
   width: 2em;
   aspect-ratio: 1;
   margin-top: -0.5em;
+  margin-bottom: -0.5em;
 }
 
 .item__value {
