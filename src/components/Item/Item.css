@@ -18,8 +18,8 @@
 .item__checkbox {
   width: 2em;
   aspect-ratio: 1;
-  margin-top: -0.4em;
-  margin-bottom: -0.6em;
+  margin-top: -0.3em;
+  margin-bottom: -0.7em;
 }
 
 .item__value {
