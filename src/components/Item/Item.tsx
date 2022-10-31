@@ -3,9 +3,21 @@ import Checkbox from '../Checkbox/Checkbox';
 import './Item.css';
 import classNames from 'classnames';
 
-function Item({ item, onEdit }: { item: Task; onEdit: (task: Task) => void }) {
+function Item({
+  item,
+  onEdit,
+  onDelete,
+}: {
+  item: Task;
+  onEdit: (task: Task) => void;
+  onDelete: (task: Task) => void;
+}) {
   function handleDone() {
     onEdit({ ...item, isDone: !item.isDone });
+  }
+
+  function handleDelete() {
+    onDelete(item);
   }
 
   return (
@@ -30,6 +42,7 @@ function Item({ item, onEdit }: { item: Task; onEdit: (task: Task) => void }) {
           className="item__button item__button_type_delete"
           type="button"
           aria-label="Delete"
+          onClick={handleDelete}
         ></button>
       </div>
     </li>

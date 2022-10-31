@@ -5,6 +5,7 @@ import Add from '../Add/Add';
 import Filter from '../Filter/Filter';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import Item from '../Item/Item';
 import Items from '../Items/Items';
 import './App.css';
 
@@ -28,6 +29,10 @@ function App() {
     );
   }
 
+  function deleteTask(task: Task) {
+    setTasks((tasks) => tasks.filter((item) => item.id !== task.id));
+  }
+
   useEffect(() => {
     if (tasks) {
       localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -39,7 +44,18 @@ function App() {
       <Header />
       <main className="main">
         <Add onAdd={addTask} />
-        <Items items={tasks} onEdit={editTask} />
+        <Items>
+          {tasks.map((item) => {
+            return (
+              <Item
+                key={item.id}
+                item={item}
+                onEdit={editTask}
+                onDelete={deleteTask}
+              />
+            );
+          })}
+        </Items>
         <Filter />
       </main>
       <Footer />
