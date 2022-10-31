@@ -42,8 +42,8 @@ function App() {
   return (
     <div className="content">
       <Header />
+      <Add onAdd={addTask} />
       <main className="main">
-        <Add onAdd={addTask} />
         <Items>
           {tasks.map((item) => {
             return (

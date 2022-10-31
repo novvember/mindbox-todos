@@ -1,5 +1,7 @@
 .checkbox {
   aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
   transition: opacity 0.2s;
   cursor: pointer;
 }
