@@ -1,7 +1,6 @@
 import { Task } from '../../utils/interfaces';
 import Checkbox from '../Checkbox/Checkbox';
 import './Item.css';
-import { useState } from 'react';
 import classNames from 'classnames';
 
 function Item({ item, onEdit }: { item: Task; onEdit: (task: Task) => void }) {
