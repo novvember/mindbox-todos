@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mindbox-todos/static/css/main.3359b519.css",
-    "main.js": "/mindbox-todos/static/js/main.fd8fdef6.js",
+    "main.css": "/mindbox-todos/static/css/main.3d33ea6a.css",
+    "main.js": "/mindbox-todos/static/js/main.7cfa7974.js",
     "static/media/Raleway-VariableFont_wght.ttf": "/mindbox-todos/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/Raleway-Italic-VariableFont_wght.ttf": "/mindbox-todos/static/media/Raleway-Italic-VariableFont_wght.292a60624abe8149803a.ttf",
     "index.html": "/mindbox-todos/index.html",
@@ -10,11 +10,11 @@
     "static/media/icon__delete.svg": "/mindbox-todos/static/media/icon__delete.1531e02fc91228864964.svg",
     "static/media/icon__edit.svg": "/mindbox-todos/static/media/icon__edit.76608088ef8f6403a367.svg",
     "static/media/icon__checkbox.svg": "/mindbox-todos/static/media/icon__checkbox.47fae9c357db9db8fcbc.svg",
-    "main.3359b519.css.map": "/mindbox-todos/static/css/main.3359b519.css.map",
-    "main.fd8fdef6.js.map": "/mindbox-todos/static/js/main.fd8fdef6.js.map"
+    "main.3d33ea6a.css.map": "/mindbox-todos/static/css/main.3d33ea6a.css.map",
+    "main.7cfa7974.js.map": "/mindbox-todos/static/js/main.7cfa7974.js.map"
   },
   "entrypoints": [
-    "static/css/main.3359b519.css",
-    "static/js/main.fd8fdef6.js"
+    "static/css/main.3d33ea6a.css",
+    "static/js/main.7cfa7974.js"
   ]
 }
