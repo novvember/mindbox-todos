@@ -5,20 +5,40 @@
   font-weight: 300;
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
-  gap: 2em;
+  gap: 1em;
   align-items: baseline;
+}
+
+@media (max-width: 550px) {
+  .filter {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
 }
 
 .filter__status {
   justify-self: left;
 }
 
+@media (max-width: 550px) {
+  .filter__status {
+    justify-self: center;
+  }
+}
+
 .filter__delete-button {
   justify-self: right;
   border: none;
   background-color: transparent;
+  font-weight: inherit;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.1s;
+}
+
+@media (max-width: 550px) {
+  .filter__delete-button {
+    justify-self: center;
+  }
 }
 
 .filter__delete-button:hover {
@@ -32,7 +52,7 @@
 .filter__groups {
   justify-self: center;
   display: flex;
-  gap: 2em;
+  gap: 1em;
 }
 
 .filter__radio-container {

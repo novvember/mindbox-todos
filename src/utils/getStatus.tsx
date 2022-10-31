@@ -10,7 +10,7 @@ export default function getStatus(
   if (filterConfig.group === 'all' || filterConfig.group === 'active') {
     if (countDone > 0)
       return `${countDone} ${countDone === 1 ? 'item' : 'items'} left`;
-    return `Everything is done. Wow!`;
+    return `All done. Wow!`;
   }
 
   if (countAll > 0)
