@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Task } from '../../utils/interfaces';
 import Add from '../Add/Add';
 import Filter from '../Filter/Filter';
@@ -19,15 +19,26 @@ function App() {
   function addTask(task: Task) {
     const newTasks = [task, ...tasks];
     setTasks(newTasks);
-    localStorage.setItem('tasks', JSON.stringify(newTasks));
   }
+
+  function editTask(task: Task) {
+    setTasks((tasks) =>
+      tasks.map((item) => (item.id === task.id ? task : item)),
+    );
+  }
+
+  useEffect(() => {
+    if (tasks) {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+  }, [tasks]);
 
   return (
     <div className="content">
       <Header />
       <main className="main">
         <Add onAdd={addTask} />
-        <Items items={tasks} />
+        <Items items={tasks} onEdit={editTask} />
         <Filter />
       </main>
       <Footer />

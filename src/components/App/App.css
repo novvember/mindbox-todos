@@ -23,6 +23,7 @@ html {
   /* Цветовая схема */
   --surface: #f5f5f5;
   --on-surface: #000;
+  --on-surface-variant: #ccc;
   --surface-general: #fff;
   --primary: #ccdfdb;
   --secondary: #e9d9d8;
