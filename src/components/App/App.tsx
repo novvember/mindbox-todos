@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import defaultTasks from '../../utils/defaultTasks';
 import { Task } from '../../utils/interfaces';
 import Add from '../Add/Add';
 import Filter from '../Filter/Filter';
@@ -12,7 +13,7 @@ function App() {
 
   function loadTasks(): Task[] {
     const tasks = localStorage.getItem('tasks');
-    if (!tasks) return [];
+    if (!tasks) return defaultTasks;
     return JSON.parse(tasks);
   }
 
