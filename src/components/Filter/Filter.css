@@ -1,0 +1,69 @@
+.filter {
+  padding: 0.5em;
+  border-top: 0.5px solid var(--on-surface-secondary);
+  font-size: 0.9em;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  gap: 2em;
+  align-items: baseline;
+}
+
+.filter__status {
+  justify-self: left;
+}
+
+.filter__delete-button {
+  justify-self: right;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.filter__delete-button:hover {
+  opacity: 0.7;
+}
+
+.filter__delete-button:active {
+  transform: scale(0.9);
+}
+
+.filter__groups {
+  justify-self: center;
+  display: flex;
+  gap: 2em;
+}
+
+.filter__radio-container {
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.filter__radio-container:hover {
+  opacity: 0.7;
+}
+
+.filter__radio-input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.filter__radio-label {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+  padding: 0.2em 0.4em;
+  transition: transform 0.1s, border-color 0.2s;
+}
+
+.filter__radio-input:checked + .filter__radio-label {
+  border-color: var(--secondary);
+}
+
+.filter__radio-label:active {
+  transform: scale(0.9);
+}
