@@ -6,6 +6,9 @@
 }
 
 .add__input {
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.4;
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -23,6 +26,7 @@
 .add__input::placeholder {
   font-style: italic;
   opacity: 0.5;
+  font-weight: 300;
 }
 
 .add::before {

@@ -26,6 +26,8 @@
   margin: 0;
   transition: color 0.2s;
   line-height: 1.4;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .item__value_done {
@@ -40,7 +42,7 @@
 }
 
 .item__buttons {
-  margin-top: 0.2em;
+  margin-top: 0.3em;
   display: flex;
   gap: 1em;
 }
