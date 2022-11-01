@@ -24,7 +24,7 @@ function Add({ onAdd }: { onAdd: (v: Task) => void }) {
   }
 
   return (
-    <form action="" className="add" onSubmit={handleSubmit}>
+    <form className="add" onSubmit={handleSubmit}>
       <input
         data-testid="add-input"
         className="add__input"

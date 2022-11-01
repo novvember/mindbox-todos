@@ -25,7 +25,7 @@ function Filter({
         {getStatus(filteredTasks, filterConfig)}
       </span>
 
-      <form action="" className="filter__groups">
+      <form className="filter__groups" data-testid="filter-groups">
         <label className="filter__radio-container">
           <input
             type="radio"
