@@ -26,6 +26,7 @@ function Add({ onAdd }: { onAdd: (v: Task) => void }) {
   return (
     <form action="" className="add" onSubmit={handleSubmit}>
       <input
+        data-testid="add-input"
         className="add__input"
         type="text"
         placeholder="What needs to be done?"
@@ -33,6 +34,7 @@ function Add({ onAdd }: { onAdd: (v: Task) => void }) {
         onChange={handleChange}
       />
       <button
+      data-testid="add-button"
         className={classNames('add__save-button', {
           'add__save-button_active': value,
         })}
