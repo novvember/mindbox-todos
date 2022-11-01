@@ -68,6 +68,7 @@ function Item({
         onChange={handleDone}
       />
       <p
+        data-testid="item-value"
         className={classNames('item__value', { item__value_done: item.isDone })}
         contentEditable={isEditMode}
         ref={valueRef}
@@ -82,12 +83,14 @@ function Item({
         {!isEditMode && (
           <>
             <button
+              data-testid="item-edit-button"
               className="item__button item__button_type_edit"
               type="button"
               aria-label="Edit"
               onClick={handleEdit}
             ></button>
             <button
+              data-testid="item-delete-button"
               className="item__button item__button_type_delete"
               type="button"
               aria-label="Delete"
