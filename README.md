@@ -2,9 +2,9 @@
 
 ToDo-приложение, позволяющее управлять текущим списком дел
 
-## Демо
+## 👀 Демо: [`novvember.github.io/mindbox-todos/`](http://novvember.tk/mindbox-todos/)
 
-[`novvember.github.io/mindbox-todos/`](http://novvember.tk/mindbox-todos/)
+![Демонстрация работы](./demo.gif)
 
 ## Возможности
 
